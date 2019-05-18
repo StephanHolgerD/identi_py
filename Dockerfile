@@ -9,3 +9,5 @@ RUN hg clone https://bitbucket.org/levitsky/identipy && \
     mv  default/* /bin
 
 ENV PATH=${PATH}:/opt/IdPy/identipy
+ENTRYPOINT /bin/bash
+WORKDIR /data
