@@ -7,3 +7,5 @@ RUN hg clone https://bitbucket.org/levitsky/identipy && \
     hg clone https://bitbucket.org/markmipt/mp-score/src/default/ && \
     cd ./identipy && pip install . && \
     mv  default/* /bin
+
+ENV PATH=${PATH}:/opt/IdPy/identipy
