@@ -5,9 +5,8 @@ RUN apt-get install mercurial
 WORKDIR /opt/IdPy
 RUN hg clone https://bitbucket.org/levitsky/identipy && \
     hg clone https://bitbucket.org/markmipt/mp-score/src/default/ && \
-    cd ./identipy && pip install . && \
-    mv  default/* /bin
+    cd ./identipy && pip install .
 
-ENV PATH=${PATH}:/opt/IdPy/identipy
+ENV PATH=${PATH}:/opt/IdPy/identipy:/opt/IdPy/default
 ENTRYPOINT /bin/bash
 WORKDIR /data
