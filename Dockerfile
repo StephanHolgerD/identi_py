@@ -31,6 +31,5 @@ RUN hg clone https://bitbucket.org/levitsky/identipy && \
     hg clone https://bitbucket.org/markmipt/mp-score/src/default/ && \
     cd ./identipy && pip install .
 
-ENV PATH=${PATH}:/opt/IdPy/identipy:/opt/IdPy/default
-ENTRYPOINT /bin/bash
+ENV PATH=${PATH}:/opt/IdPy/default
 WORKDIR /data
