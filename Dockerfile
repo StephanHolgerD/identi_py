@@ -29,7 +29,8 @@ RUN apt-get install mercurial
 WORKDIR /opt/IdPy
 RUN hg clone https://bitbucket.org/levitsky/identipy && \
     hg clone https://bitbucket.org/markmipt/mp-score/src/default/ && \
-    cd ./identipy && pip install .
+    cd ./identipy && pip install . ;\
+    cd /opt/IdPy/default ; chmod +x MPlib.py MPscore.py customxml.py SSRCalc.py
 
 ENV PATH=${PATH}:/opt/IdPy/default
 WORKDIR /data
